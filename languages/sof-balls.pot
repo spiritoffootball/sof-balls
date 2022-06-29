@@ -1,0 +1,156 @@
+# Copyright (C) 2022 Christian Wach
+# This file is distributed under the same license as the SOF Balls plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: SOF Balls 1.0a\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sof-balls\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-06-29T13:55:11+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: sof-balls\n"
+
+#. Plugin Name of the plugin
+msgid "SOF Balls"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/spiritoffootball/sof-balls"
+msgstr ""
+
+#. Description of the plugin
+msgid "Provides a Ball Custom Post Type for The Ball website."
+msgstr ""
+
+#. Author of the plugin
+msgid "Christian Wach"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://haystack.co.uk"
+msgstr ""
+
+msgid "Balls"
+msgstr ""
+
+msgid "Ball"
+msgstr ""
+
+msgid "Add New"
+msgstr ""
+
+msgid "Add New Ball"
+msgstr ""
+
+msgid "Edit Ball"
+msgstr ""
+
+msgid "New Ball"
+msgstr ""
+
+msgid "All Balls"
+msgstr ""
+
+msgid "View Ball"
+msgstr ""
+
+msgid "Search Balls"
+msgstr ""
+
+msgid "No matching Ball found"
+msgstr ""
+
+msgid "No Balls found in Trash"
+msgstr ""
+
+msgid "A ball post type"
+msgstr ""
+
+#. translators: %s: The permalink.
+msgid "Ball updated. <a href=\"%s\">View Ball</a>"
+msgstr ""
+
+msgid "Custom field updated."
+msgstr ""
+
+msgid "Custom field deleted."
+msgstr ""
+
+msgid "Ball updated."
+msgstr ""
+
+#. translators: %s: The date and time of the revision.
+msgid "Ball restored to revision from %s"
+msgstr ""
+
+#. translators: %s: The permalink.
+msgid "Ball published. <a href=\"%s\">View Ball</a>"
+msgstr ""
+
+msgid "Ball saved."
+msgstr ""
+
+#. translators: %s: The permalink.
+msgid "Ball submitted. <a target=\"_blank\" href=\"%s\">Preview Ball</a>"
+msgstr ""
+
+#. translators: 1: The date, 2: The permalink.
+msgid "Ball scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview Ball</a>"
+msgstr ""
+
+#. translators: Publish box date format - see https://php.net/date
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#. translators: %s: The permalink.
+msgid "Ball draft updated. <a target=\"_blank\" href=\"%s\">Preview Ball</a>"
+msgstr ""
+
+msgid "Add the name of the Ball"
+msgstr ""
+
+msgctxt "taxonomy general name"
+msgid "Ball Types"
+msgstr ""
+
+msgctxt "taxonomy singular name"
+msgid "Ball Type"
+msgstr ""
+
+msgid "Search Ball Types"
+msgstr ""
+
+msgid "All Ball Types"
+msgstr ""
+
+msgid "Parent Ball Type"
+msgstr ""
+
+msgid "Parent Ball Type:"
+msgstr ""
+
+msgid "Edit Ball Type"
+msgstr ""
+
+msgid "Update Ball Type"
+msgstr ""
+
+msgid "Add New Ball Type"
+msgstr ""
+
+msgid "New Ball Type Name"
+msgstr ""
+
+msgid "Ball Types"
+msgstr ""
+
+msgid "No Ball Types found"
+msgstr ""
+
+#. translators: %s: The plural name of the taxonomy terms.
+msgid "Show All %s"
+msgstr ""
