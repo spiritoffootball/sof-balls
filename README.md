@@ -1,10 +1,10 @@
 # SOF Balls
 
-Provides provides a Ball Custom Post Type for The Ball website.
+Provides provides a "Ball" Custom Post Type for The Ball website.
 
 ## Description
 
-*SOF Balls* is a WordPress plugin that provides a Ball Custom Post Type and associated functionality for The Ball website.
+*SOF Balls* is a WordPress plugin that provides a "Ball" Custom Post Type and associated functionality for The Ball website.
 
 ## Installation
 
@@ -14,7 +14,7 @@ There are two ways to install from GitHub:
 
 If you have downloaded this plugin as a ZIP file from the GitHub repository, do the following to install the plugin:
 
-1. Unzip the .zip file and, if needed, rename the enclosing folder so that the plugin's files are located directly inside `/wp-content/plugins/sof-organisations`
+1. Unzip the .zip file and, if needed, rename the enclosing folder so that the plugin's files are located directly inside `/wp-content/plugins/sof-balls`
 2. Activate the plugin.
 3. Configure the settings.
 4. You're done.
