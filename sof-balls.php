@@ -57,15 +57,6 @@ class SOF_Balls {
 	public $cpt;
 
 	/**
-	 * Geo Mashup object.
-	 *
-	 * @since 1.0
-	 * @access public
-	 * @var object $geo_mashup The Geo Mashup object.
-	 */
-	public $geo_mashup;
-
-	/**
 	 * Constructor.
 	 *
 	 * @since 1.0
@@ -137,7 +128,6 @@ class SOF_Balls {
 
 		// Include class files.
 		include SOF_BALLS_PATH . 'includes/class-cpt.php';
-		include SOF_BALLS_PATH . 'includes/class-geo-mashup.php';
 
 	}
 
@@ -150,7 +140,6 @@ class SOF_Balls {
 
 		// Init objects.
 		$this->cpt = new SOF_Balls_CPT( $this );
-		$this->geo_mashup = new SOF_Balls_Geo_Mashup( $this );
 
 	}
 
