@@ -6,7 +6,7 @@
  * Description:       Provides a Ball Custom Post Type for The Ball website.
  * Plugin URI:        https://github.com/spiritoffootball/sof-balls
  * GitHub Plugin URI: https://github.com/spiritoffootball/sof-balls
- * Version:           1.1.0a
+ * Version:           1.1.0
  * Author:            Christian Wach
  * Author URI:        https://haystack.co.uk
  * Text Domain:       sof-balls
@@ -19,7 +19,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Set our version here.
-define( 'SOF_BALLS_VERSION', '1.1.0a' );
+define( 'SOF_BALLS_VERSION', '1.1.0' );
 
 // Store reference to this file.
 if ( ! defined( 'SOF_BALLS_FILE' ) ) {
