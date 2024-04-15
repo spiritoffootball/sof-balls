@@ -1,156 +1,199 @@
-# Copyright (C) 2022 Christian Wach
+# Copyright (C) 2024 Christian Wach
 # This file is distributed under the same license as the SOF Balls plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: SOF Balls 1.0a\n"
+"Project-Id-Version: SOF Balls 1.1.0a\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sof-balls\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-06-29T13:55:11+00:00\n"
+"POT-Creation-Date: 2024-04-15T11:47:14+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.6.0\n"
+"X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: sof-balls\n"
 
 #. Plugin Name of the plugin
+#: sof-balls.php
 msgid "SOF Balls"
 msgstr ""
 
 #. Plugin URI of the plugin
+#: sof-balls.php
 msgid "https://github.com/spiritoffootball/sof-balls"
 msgstr ""
 
 #. Description of the plugin
+#: sof-balls.php
 msgid "Provides a Ball Custom Post Type for The Ball website."
 msgstr ""
 
 #. Author of the plugin
+#: sof-balls.php
 msgid "Christian Wach"
 msgstr ""
 
 #. Author URI of the plugin
+#: sof-balls.php
 msgid "https://haystack.co.uk"
 msgstr ""
 
+#: includes/class-cpt-balls.php:169
+#: includes/class-cpt-balls.php:180
 msgid "Balls"
 msgstr ""
 
+#: includes/class-cpt-balls.php:170
 msgid "Ball"
 msgstr ""
 
+#: includes/class-cpt-balls.php:171
 msgid "Add New"
 msgstr ""
 
+#: includes/class-cpt-balls.php:172
 msgid "Add New Ball"
 msgstr ""
 
+#: includes/class-cpt-balls.php:173
 msgid "Edit Ball"
 msgstr ""
 
+#: includes/class-cpt-balls.php:174
 msgid "New Ball"
 msgstr ""
 
+#: includes/class-cpt-balls.php:175
 msgid "All Balls"
 msgstr ""
 
+#: includes/class-cpt-balls.php:176
 msgid "View Ball"
 msgstr ""
 
+#: includes/class-cpt-balls.php:177
 msgid "Search Balls"
 msgstr ""
 
+#: includes/class-cpt-balls.php:178
 msgid "No matching Ball found"
 msgstr ""
 
+#: includes/class-cpt-balls.php:179
 msgid "No Balls found in Trash"
 msgstr ""
 
+#: includes/class-cpt-balls.php:185
 msgid "A ball post type"
 msgstr ""
 
 #. translators: %s: The permalink.
+#: includes/class-cpt-balls.php:250
 msgid "Ball updated. <a href=\"%s\">View Ball</a>"
 msgstr ""
 
+#: includes/class-cpt-balls.php:255
 msgid "Custom field updated."
 msgstr ""
 
+#: includes/class-cpt-balls.php:256
 msgid "Custom field deleted."
 msgstr ""
 
+#: includes/class-cpt-balls.php:257
 msgid "Ball updated."
 msgstr ""
 
 #. translators: %s: The date and time of the revision.
+#: includes/class-cpt-balls.php:266
 msgid "Ball restored to revision from %s"
 msgstr ""
 
 #. translators: %s: The permalink.
+#: includes/class-cpt-balls.php:277
 msgid "Ball published. <a href=\"%s\">View Ball</a>"
 msgstr ""
 
+#: includes/class-cpt-balls.php:282
 msgid "Ball saved."
 msgstr ""
 
 #. translators: %s: The permalink.
+#: includes/class-cpt-balls.php:287
 msgid "Ball submitted. <a target=\"_blank\" href=\"%s\">Preview Ball</a>"
 msgstr ""
 
 #. translators: 1: The date, 2: The permalink.
+#: includes/class-cpt-balls.php:294
 msgid "Ball scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview Ball</a>"
 msgstr ""
 
 #. translators: Publish box date format - see https://php.net/date
+#: includes/class-cpt-balls.php:296
 msgid "M j, Y @ G:i"
 msgstr ""
 
 #. translators: %s: The permalink.
+#: includes/class-cpt-balls.php:303
 msgid "Ball draft updated. <a target=\"_blank\" href=\"%s\">Preview Ball</a>"
 msgstr ""
 
+#: includes/class-cpt-balls.php:330
 msgid "Add the name of the Ball"
 msgstr ""
 
+#: includes/class-cpt-balls.php:360
 msgctxt "taxonomy general name"
 msgid "Ball Types"
 msgstr ""
 
+#: includes/class-cpt-balls.php:361
 msgctxt "taxonomy singular name"
 msgid "Ball Type"
 msgstr ""
 
+#: includes/class-cpt-balls.php:362
 msgid "Search Ball Types"
 msgstr ""
 
+#: includes/class-cpt-balls.php:363
 msgid "All Ball Types"
 msgstr ""
 
+#: includes/class-cpt-balls.php:364
 msgid "Parent Ball Type"
 msgstr ""
 
+#: includes/class-cpt-balls.php:365
 msgid "Parent Ball Type:"
 msgstr ""
 
+#: includes/class-cpt-balls.php:366
 msgid "Edit Ball Type"
 msgstr ""
 
+#: includes/class-cpt-balls.php:367
 msgid "Update Ball Type"
 msgstr ""
 
+#: includes/class-cpt-balls.php:368
 msgid "Add New Ball Type"
 msgstr ""
 
+#: includes/class-cpt-balls.php:369
 msgid "New Ball Type Name"
 msgstr ""
 
+#: includes/class-cpt-balls.php:370
 msgid "Ball Types"
 msgstr ""
 
+#: includes/class-cpt-balls.php:371
 msgid "No Ball Types found"
 msgstr ""
 
 #. translators: %s: The plural name of the taxonomy terms.
+#: includes/class-cpt-balls.php:443
 msgid "Show All %s"
 msgstr ""
