@@ -5,7 +5,6 @@
  * Handles providing a "Balls" Custom Post Type.
  *
  * @package SOF_Balls
- * @since 1.0
  */
 
 // Exit if accessed directly.
@@ -25,7 +24,7 @@ class SOF_Balls_CPT_Balls {
 	 *
 	 * @since 1.0
 	 * @access public
-	 * @var object $plugin The plugin object.
+	 * @var SOF_Balls
 	 */
 	public $plugin;
 
@@ -34,7 +33,7 @@ class SOF_Balls_CPT_Balls {
 	 *
 	 * @since 1.0
 	 * @access public
-	 * @var object $cpt The Custom Post Type object.
+	 * @var SOF_Balls_CPT
 	 */
 	public $cpt;
 
@@ -43,7 +42,7 @@ class SOF_Balls_CPT_Balls {
 	 *
 	 * @since 1.0
 	 * @access public
-	 * @var object $cpt The name of the Custom Post Type.
+	 * @var string
 	 */
 	public $post_type_name = 'ball';
 
@@ -52,7 +51,7 @@ class SOF_Balls_CPT_Balls {
 	 *
 	 * @since 1.0
 	 * @access public
-	 * @var object $cpt The REST base of the Custom Post Type.
+	 * @var string
 	 */
 	public $post_type_rest_base = 'balls';
 
@@ -61,7 +60,7 @@ class SOF_Balls_CPT_Balls {
 	 *
 	 * @since 1.0
 	 * @access public
-	 * @var str $taxonomy_name The name of the Custom Taxonomy.
+	 * @var string
 	 */
 	public $taxonomy_name = 'ball-type';
 
@@ -70,7 +69,7 @@ class SOF_Balls_CPT_Balls {
 	 *
 	 * @since 1.0
 	 * @access public
-	 * @var str $taxonomy_rest_base The REST base of the Custom Taxonomy.
+	 * @var string
 	 */
 	public $taxonomy_rest_base = 'ball-type';
 
@@ -147,7 +146,7 @@ class SOF_Balls_CPT_Balls {
 
 	}
 
-	// -------------------------------------------------------------------------
+	// -----------------------------------------------------------------------------------
 
 	/**
 	 * Create our Custom Post Type.
@@ -335,7 +334,7 @@ class SOF_Balls_CPT_Balls {
 
 	}
 
-	// -------------------------------------------------------------------------
+	// -----------------------------------------------------------------------------------
 
 	/**
 	 * Create our Custom Taxonomy.

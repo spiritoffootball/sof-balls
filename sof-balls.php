@@ -1,23 +1,22 @@
 <?php
 /**
- * Plugin Name: SOF Balls
- * Plugin URI: https://github.com/spiritoffootball/sof-balls
+ * SOF Balls
+ *
+ * Plugin Name:       SOF Balls
+ * Description:       Provides a Ball Custom Post Type for The Ball website.
+ * Plugin URI:        https://github.com/spiritoffootball/sof-balls
  * GitHub Plugin URI: https://github.com/spiritoffootball/sof-balls
- * Description: Provides a Ball Custom Post Type for The Ball website.
- * Author: Christian Wach
- * Version: 1.1.0a
- * Author URI: https://haystack.co.uk
- * Text Domain: sof-balls
- * Domain Path: /languages
+ * Version:           1.1.0a
+ * Author:            Christian Wach
+ * Author URI:        https://haystack.co.uk
+ * Text Domain:       sof-balls
+ * Domain Path:       /languages
  *
  * @package SOF_Balls
- * @since 1.0
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
-
 
 // Set our version here.
 define( 'SOF_BALLS_VERSION', '1.1.0a' );
@@ -31,12 +30,11 @@ if ( ! defined( 'SOF_BALLS_FILE' ) ) {
 if ( ! defined( 'SOF_BALLS_URL' ) ) {
 	define( 'SOF_BALLS_URL', plugin_dir_url( SOF_BALLS_FILE ) );
 }
+
 // Store PATH to this plugin's directory.
 if ( ! defined( 'SOF_BALLS_PATH' ) ) {
 	define( 'SOF_BALLS_PATH', plugin_dir_path( SOF_BALLS_FILE ) );
 }
-
-
 
 /**
  * Main Plugin Class.
@@ -52,7 +50,7 @@ class SOF_Balls {
 	 *
 	 * @since 1.0
 	 * @access public
-	 * @var object $cpt The Custom Post Type loader object.
+	 * @var SOF_Balls_CPT
 	 */
 	public $cpt;
 
@@ -81,13 +79,9 @@ class SOF_Balls {
 			return;
 		}
 
-		// Load translation.
+		// Bootstrap plugin.
 		$this->translation();
-
-		// Include files.
 		$this->include_files();
-
-		// Set up objects and references.
 		$this->setup_objects();
 
 		/**
@@ -182,8 +176,6 @@ class SOF_Balls {
 	}
 
 }
-
-
 
 /**
  * Utility to get a reference to this plugin.

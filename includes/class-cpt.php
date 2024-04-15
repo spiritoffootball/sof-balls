@@ -6,7 +6,6 @@
  * individual CPTs.
  *
  * @package SOF_Balls
- * @since 1.0
  */
 
 // Exit if accessed directly.
@@ -26,7 +25,7 @@ class SOF_Balls_CPT {
 	 *
 	 * @since 1.0
 	 * @access public
-	 * @var object $plugin The plugin object.
+	 * @var SOF_Balls
 	 */
 	public $plugin;
 
@@ -35,7 +34,7 @@ class SOF_Balls_CPT {
 	 *
 	 * @since 1.0
 	 * @access public
-	 * @var object $balls The Balls CPT object.
+	 * @var SOF_Balls_CPT_Balls
 	 */
 	public $balls;
 
