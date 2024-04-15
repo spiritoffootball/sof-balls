@@ -85,7 +85,7 @@ class SOF_Balls_CPT_Balls {
 
 		// Store references.
 		$this->plugin = $parent->plugin;
-		$this->cpt = $parent;
+		$this->cpt    = $parent;
 
 		// Init when this plugin is loaded.
 		add_action( 'sof_balls/cpt/loaded', [ $this, 'register_hooks' ] );
@@ -162,11 +162,11 @@ class SOF_Balls_CPT_Balls {
 			return;
 		}
 
-		// Set up the post type called "Ball".
-		register_post_type( $this->post_type_name, [
+		// Define Post Type args.
+		$args = [
 
 			// Labels.
-			'labels' => [
+			'labels'              => [
 				'name'               => __( 'Balls', 'sof-balls' ),
 				'singular_name'      => __( 'Ball', 'sof-balls' ),
 				'add_new'            => __( 'Add New', 'sof-balls' ),
@@ -182,30 +182,30 @@ class SOF_Balls_CPT_Balls {
 			],
 
 			// Defaults.
-			'menu_icon' => 'dashicons-admin-site-alt3',
-			'description' => __( 'A ball post type', 'sof-balls' ),
-			'public' => true,
-			'publicly_queryable' => true,
+			'menu_icon'           => 'dashicons-admin-site-alt3',
+			'description'         => __( 'A ball post type', 'sof-balls' ),
+			'public'              => true,
+			'publicly_queryable'  => true,
 			'exclude_from_search' => false,
-			'show_ui' => true,
-			'show_in_nav_menus' => true,
-			'show_in_menu' => true,
-			'show_in_admin_bar' => true,
-			'has_archive' => false,
-			'query_var' => true,
-			'capability_type' => 'post',
-			'hierarchical' => false,
-			'menu_position' => 20,
-			'map_meta_cap' => true,
+			'show_ui'             => true,
+			'show_in_nav_menus'   => true,
+			'show_in_menu'        => true,
+			'show_in_admin_bar'   => true,
+			'has_archive'         => false,
+			'query_var'           => true,
+			'capability_type'     => 'post',
+			'hierarchical'        => false,
+			'menu_position'       => 20,
+			'map_meta_cap'        => true,
 
 			// Rewrite.
-			'rewrite' => [
-				'slug' => 'balls',
+			'rewrite'             => [
+				'slug'       => 'balls',
 				'with_front' => false,
 			],
 
 			// Supports.
-			'supports' => [
+			'supports'            => [
 				'title',
 				'editor',
 				'excerpt',
@@ -213,10 +213,13 @@ class SOF_Balls_CPT_Balls {
 			],
 
 			// REST setup.
-			'show_in_rest' => true,
-			'rest_base' => $this->post_type_rest_base,
+			'show_in_rest'        => true,
+			'rest_base'           => $this->post_type_rest_base,
 
-		] );
+		];
+
+		// Set up the post type called "Ball".
+		register_post_type( $this->post_type_name, $args );
 
 		// Flag done.
 		$registered = true;
@@ -240,23 +243,23 @@ class SOF_Balls_CPT_Balls {
 		$messages[ $this->post_type_name ] = [
 
 			// Unused - messages start at index 1.
-			0 => '',
+			0  => '',
 
 			// Item updated.
-			1 => sprintf(
+			1  => sprintf(
 				/* translators: %s: The permalink. */
 				__( 'Ball updated. <a href="%s">View Ball</a>', 'sof-balls' ),
 				esc_url( get_permalink( $post_ID ) )
 			),
 
 			// Custom fields.
-			2 => __( 'Custom field updated.', 'sof-balls' ),
-			3 => __( 'Custom field deleted.', 'sof-balls' ),
-			4 => __( 'Ball updated.', 'sof-balls' ),
+			2  => __( 'Custom field updated.', 'sof-balls' ),
+			3  => __( 'Custom field deleted.', 'sof-balls' ),
+			4  => __( 'Ball updated.', 'sof-balls' ),
 
 			// Item restored to a revision.
 			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			5 => isset( $_GET['revision'] ) ?
+			5  => isset( $_GET['revision'] ) ?
 
 				// Revision text.
 				sprintf(
@@ -270,24 +273,24 @@ class SOF_Balls_CPT_Balls {
 				false,
 
 			// Item published.
-			6 => sprintf(
+			6  => sprintf(
 				/* translators: %s: The permalink. */
 				__( 'Ball published. <a href="%s">View Ball</a>', 'sof-balls' ),
 				esc_url( get_permalink( $post_ID ) )
 			),
 
 			// Item saved.
-			7 => __( 'Ball saved.', 'sof-balls' ),
+			7  => __( 'Ball saved.', 'sof-balls' ),
 
 			// Item submitted.
-			8 => sprintf(
+			8  => sprintf(
 				/* translators: %s: The permalink. */
 				__( 'Ball submitted. <a target="_blank" href="%s">Preview Ball</a>', 'sof-balls' ),
 				esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) )
 			),
 
 			// Item scheduled.
-			9 => sprintf(
+			9  => sprintf(
 				/* translators: 1: The date, 2: The permalink. */
 				__( 'Ball scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview Ball</a>', 'sof-balls' ),
 				/* translators: Publish box date format - see https://php.net/date */
@@ -320,7 +323,7 @@ class SOF_Balls_CPT_Balls {
 	public function post_type_title( $title ) {
 
 		// Bail if not our post type.
-		if ( $this->post_type_name !== get_post_type() ) {
+		if ( get_post_type() !== $this->post_type_name ) {
 			return $title;
 		}
 
@@ -351,10 +354,10 @@ class SOF_Balls_CPT_Balls {
 		$args = [
 
 			// Same as "category".
-			'hierarchical' => true,
+			'hierarchical'      => true,
 
 			// Labels.
-			'labels' => [
+			'labels'            => [
 				'name'              => _x( 'Ball Types', 'taxonomy general name', 'sof-balls' ),
 				'singular_name'     => _x( 'Ball Type', 'taxonomy singular name', 'sof-balls' ),
 				'search_items'      => __( 'Search Ball Types', 'sof-balls' ),
@@ -370,17 +373,17 @@ class SOF_Balls_CPT_Balls {
 			],
 
 			// Rewrite rules.
-			'rewrite' => [
+			'rewrite'           => [
 				'slug' => 'ball-types',
 			],
 
 			// Show column in wp-admin.
 			'show_admin_column' => true,
-			'show_ui' => true,
+			'show_ui'           => true,
 
 			// REST setup.
-			'show_in_rest' => true,
-			'rest_base' => $this->taxonomy_rest_base,
+			'show_in_rest'      => true,
+			'rest_base'         => $this->taxonomy_rest_base,
 
 		];
 
@@ -400,7 +403,7 @@ class SOF_Balls_CPT_Balls {
 	 * @since 1.0
 	 *
 	 * @param array $args The existing arguments.
-	 * @param int $post_id The WordPress post ID.
+	 * @param int   $post_id The WordPress post ID.
 	 */
 	public function taxonomy_fix_metabox( $args, $post_id ) {
 
@@ -428,27 +431,30 @@ class SOF_Balls_CPT_Balls {
 		global $typenow;
 
 		// Bail if not our post type.
-		if ( $typenow != $this->post_type_name ) {
+		if ( $typenow !== $this->post_type_name ) {
 			return;
 		}
 
 		// Get tax object.
 		$taxonomy = get_taxonomy( $this->taxonomy_name );
 
-		// Show a dropdown.
-		wp_dropdown_categories( [
+		// Build args.
+		$args = [
 			/* translators: %s: The plural name of the taxonomy terms. */
 			'show_option_all' => sprintf( __( 'Show All %s', 'sof-balls' ), $taxonomy->label ),
-			'taxonomy' => $this->taxonomy_name,
-			'name' => $this->taxonomy_name,
-			'orderby' => 'name',
+			'taxonomy'        => $this->taxonomy_name,
+			'name'            => $this->taxonomy_name,
+			'orderby'         => 'name',
 			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Recommended
-			'selected' => isset( $_GET[ $this->taxonomy_name ] ) ? wp_unslash( $_GET[ $this->taxonomy_name ] ) : '',
-			'show_count' => true,
-			'hide_empty' => true,
-			'value_field' => 'slug',
-			'hierarchical' => 1,
-		] );
+			'selected'        => isset( $_GET[ $this->taxonomy_name ] ) ? wp_unslash( $_GET[ $this->taxonomy_name ] ) : '',
+			'show_count'      => true,
+			'hide_empty'      => true,
+			'value_field'     => 'slug',
+			'hierarchical'    => 1,
+		];
+
+		// Show a dropdown.
+		wp_dropdown_categories( $args );
 
 	}
 
