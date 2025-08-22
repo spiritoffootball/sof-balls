@@ -80,9 +80,9 @@ class SOF_Balls {
 		}
 
 		// Bootstrap plugin.
-		$this->translation();
 		$this->include_files();
 		$this->setup_objects();
+		$this->register_hooks();
 
 		/**
 		 * Broadcast that this plugin is now loaded.
@@ -93,6 +93,18 @@ class SOF_Balls {
 
 		// We're done.
 		$done = true;
+
+	}
+
+	/**
+	 * Registers hook callbacks.
+	 *
+	 * @since 1.1.1
+	 */
+	private function register_hooks() {
+
+		// Use translation.
+		add_action( 'init', [ $this, 'translation' ] );
 
 	}
 
