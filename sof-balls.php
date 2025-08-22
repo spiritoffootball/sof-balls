@@ -97,6 +97,30 @@ class SOF_Balls {
 	}
 
 	/**
+	 * Include files.
+	 *
+	 * @since 1.0
+	 */
+	private function include_files() {
+
+		// Include class files.
+		include SOF_BALLS_PATH . 'includes/class-cpt.php';
+
+	}
+
+	/**
+	 * Set up this plugin's objects.
+	 *
+	 * @since 1.0
+	 */
+	private function setup_objects() {
+
+		// Init objects.
+		$this->cpt = new SOF_Balls_CPT( $this );
+
+	}
+
+	/**
 	 * Registers hook callbacks.
 	 *
 	 * @since 1.1.1
@@ -122,30 +146,6 @@ class SOF_Balls {
 			false, // Deprecated argument.
 			dirname( plugin_basename( SOF_BALLS_FILE ) ) . '/languages/' // Relative path to files.
 		);
-
-	}
-
-	/**
-	 * Include files.
-	 *
-	 * @since 1.0
-	 */
-	public function include_files() {
-
-		// Include class files.
-		include SOF_BALLS_PATH . 'includes/class-cpt.php';
-
-	}
-
-	/**
-	 * Set up this plugin's objects.
-	 *
-	 * @since 1.0
-	 */
-	public function setup_objects() {
-
-		// Init objects.
-		$this->cpt = new SOF_Balls_CPT( $this );
 
 	}
 

@@ -43,7 +43,7 @@ class SOF_Balls_CPT {
 	 *
 	 * @since 1.0
 	 *
-	 * @param object $plugin The plugin object.
+	 * @param SOF_Balls $plugin The plugin object.
 	 */
 	public function __construct( $plugin ) {
 
@@ -81,7 +81,7 @@ class SOF_Balls_CPT {
 	 *
 	 * @since 1.0
 	 */
-	public function include_files() {
+	private function include_files() {
 
 		include SOF_BALLS_PATH . 'includes/class-cpt-balls.php';
 
@@ -92,7 +92,7 @@ class SOF_Balls_CPT {
 	 *
 	 * @since 1.0
 	 */
-	public function setup_objects() {
+	private function setup_objects() {
 
 		$this->balls = new SOF_Balls_CPT_Balls( $this );
 
@@ -103,7 +103,7 @@ class SOF_Balls_CPT {
 	 *
 	 * @since 1.0
 	 */
-	public function register_hooks() {
+	private function register_hooks() {
 
 	}
 

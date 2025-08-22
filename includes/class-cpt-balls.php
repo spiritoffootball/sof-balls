@@ -78,7 +78,7 @@ class SOF_Balls_CPT_Balls {
 	 *
 	 * @since 1.0
 	 *
-	 * @param object $parent The parent object.
+	 * @param SOF_Balls_CPT $parent The parent object.
 	 */
 	public function __construct( $parent ) {
 
