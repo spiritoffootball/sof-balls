@@ -161,33 +161,35 @@ class SOF_Balls_CPT_Balls {
 			return;
 		}
 
+		// Define labels.
+		$labels = [
+			'name'               => __( 'Balls', 'sof-balls' ),
+			'singular_name'      => __( 'Ball', 'sof-balls' ),
+			'add_new'            => __( 'Add New', 'sof-balls' ),
+			'add_new_item'       => __( 'Add New Ball', 'sof-balls' ),
+			'edit_item'          => __( 'Edit Ball', 'sof-balls' ),
+			'new_item'           => __( 'New Ball', 'sof-balls' ),
+			'all_items'          => __( 'All Balls', 'sof-balls' ),
+			'view_item'          => __( 'View Ball', 'sof-balls' ),
+			'search_items'       => __( 'Search Balls', 'sof-balls' ),
+			'not_found'          => __( 'No matching Ball found', 'sof-balls' ),
+			'not_found_in_trash' => __( 'No Balls found in Trash', 'sof-balls' ),
+			'menu_name'          => __( 'Balls', 'sof-balls' ),
+		];
+
 		// Define Post Type args.
 		$args = [
 
-			// Labels.
-			'labels'              => [
-				'name'               => __( 'Balls', 'sof-balls' ),
-				'singular_name'      => __( 'Ball', 'sof-balls' ),
-				'add_new'            => __( 'Add New', 'sof-balls' ),
-				'add_new_item'       => __( 'Add New Ball', 'sof-balls' ),
-				'edit_item'          => __( 'Edit Ball', 'sof-balls' ),
-				'new_item'           => __( 'New Ball', 'sof-balls' ),
-				'all_items'          => __( 'All Balls', 'sof-balls' ),
-				'view_item'          => __( 'View Ball', 'sof-balls' ),
-				'search_items'       => __( 'Search Balls', 'sof-balls' ),
-				'not_found'          => __( 'No matching Ball found', 'sof-balls' ),
-				'not_found_in_trash' => __( 'No Balls found in Trash', 'sof-balls' ),
-				'menu_name'          => __( 'Balls', 'sof-balls' ),
-			],
+			'labels'              => $labels,
 
 			// Defaults.
 			'menu_icon'           => 'dashicons-admin-site-alt3',
-			'description'         => __( 'A ball post type', 'sof-balls' ),
+			'description'         => __( 'A post type that represents Balls on The Ball 20xx websites.', 'sof-balls' ),
 			'public'              => true,
 			'publicly_queryable'  => true,
-			'exclude_from_search' => false,
+			'exclude_from_search' => true,
 			'show_ui'             => true,
-			'show_in_nav_menus'   => true,
+			'show_in_nav_menus'   => false,
 			'show_in_menu'        => true,
 			'show_in_admin_bar'   => true,
 			'has_archive'         => false,
