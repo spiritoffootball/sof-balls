@@ -196,7 +196,7 @@ class SOF_Balls_CPT_Balls {
 			'query_var'           => true,
 			'capability_type'     => 'post',
 			'hierarchical'        => false,
-			'menu_position'       => 20,
+			'menu_position'       => 48,
 			'map_meta_cap'        => true,
 
 			// Rewrite.
