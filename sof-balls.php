@@ -4,7 +4,7 @@
  *
  * Plugin Name:       SOF Balls
  * Description:       Provides a Ball Custom Post Type for The Ball website.
- * Version:           1.1.1a
+ * Version:           1.1.1
  * Plugin URI:        https://github.com/spiritoffootball/sof-balls
  * GitHub Plugin URI: https://github.com/spiritoffootball/sof-balls
  * Author:            Christian Wach
@@ -19,7 +19,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Set our version here.
-define( 'SOF_BALLS_VERSION', '1.1.1a' );
+define( 'SOF_BALLS_VERSION', '1.1.1' );
 
 // Store reference to this file.
 if ( ! defined( 'SOF_BALLS_FILE' ) ) {
